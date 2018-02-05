@@ -1,49 +1,15 @@
-﻿using Quartz;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using TimedTask;
 
-namespace FunctionalProgram
+namespace LambdaExpression
 {
-    class Program
+    class ExpressionTreeDynamicCreateMethod
     {
-        /// <summary>
-        /// 原Main
-        /// </summary>
-        /// <param name="args"></param>
-        static void Main1(string[] args)
-        {
-            //cron表达式 参考 http://www.cnblogs.com/sunjie9606/archive/2012/03/15/2397626.html
-            //每隔5秒执行一次这个方法
-            //QuartzManager.AddJob<MyJob>("每隔5秒", "*/5 * * * * ?");
-
-            // test Finder
-            //Arrange
-            var article = new Article()
-            {
-                Title = "this is a title",
-                Content = "this is content",
-                Comment = "this is comment",
-                Author = "this is author"
-            };
-
-            //Act
-            var result = WordFinder<Article>.For(article)
-                .Find(x => x.Title)
-                .Find(x => x.Content)
-                .Find(x => x.Comment)
-                .Find(x => x.Author)
-                .Execute("content");
-            Console.WriteLine("\nWhat is your name? ");
-            Console.WriteLine(result);
-            Console.ReadKey();
-        }
-
-        static void Main(string[] args)
+        static void DynamicCreateMethod(string[] args)
         {
             //i*j+w*x
             ParameterExpression a = Expression.Parameter(typeof(int), "i");   //创建一个表达式树中的参数，作为一个节点，这里是最下层的节点

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2B87F995-B284-4ED9-B9DF-48820FAC9ED0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp1</RootNamespace>
-    <AssemblyName>ConsoleApp1</AssemblyName>
+    <RootNamespace>CSharpStudy</RootNamespace>
+    <AssemblyName>CSharpStudy</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -38,6 +38,8 @@
     <Reference Include="Common.Logging">
       <HintPath>D:\开发者\C#\dll\Common.Logging.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Quartz">
       <HintPath>D:\开发者\C#\dll\Quartz.dll</HintPath>
     </Reference>
@@ -52,14 +54,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DelegateDemo\DelegateDemo.cs" />
+    <Compile Include="FunctionalProgram\FunctionCurrying.cs" />
+    <Compile Include="FunctionalProgram\LazyEvaluation.cs" />
+    <Compile Include="FunctionalProgram\PropertyFeeCalculator.cs" />
+    <Compile Include="IntelliTestDemo\IntelliTestDemo01.cs" />
+    <Compile Include="LambdaExpression\ExpressionTreeDynamicCreateMethod.cs" />
+    <Compile Include="LambdaExpression\LambdaExample.cs" />
+    <Compile Include="LambdaExpression\LambdaExpressionTree.cs" />
+    <Compile Include="LambdaExpression\ReviewDelegate.cs" />
+    <Compile Include="LambdaExpression\UserDefinedLambda.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimedTaskDemo\QuartzManager.cs" />
     <Compile Include="TimedTaskDemo\TimedTask.cs" />
+    <Compile Include="FunctionalProgram\WordFinder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
